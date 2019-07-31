@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ponsel</title>
+    <style>
+        body {
+            margin: 0 auto;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #ponsel {
+            background-color: coral;
+        }
+        #ponsel div .merekPonsel {
+            display: block;
+            color: crimson;
+        }
+        #ponsel div .hargaPonsel {
+            display: block;
+            color: red;
+        }
+        #ponsel div .RAMPonsel {
+            display: block;
+            color: darkmagenta;
+        }
+        #ponsel div .storagePonsel {
+            display: block;
+            color: cyan;
+        }
+        #ponsel div .merek-Ponsel ::before {
+            content: "merek: "
+        }
+        #ponsel div .harga-Ponsel ::before {
+            content: "harga: "
+        }
+        #ponsel div .RAM-Ponsel ::before {
+            content: "RAM: "
+        }
+        #ponsel div .storage-Ponsel ::before {
+            content: "storage: "
+        }
+    </style>
+</head>
+<body>
+    <div id="ponsel"></div>
+    <script src="ponsel.js"></script>
+</body>
+</html>

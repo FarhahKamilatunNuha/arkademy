@@ -1,0 +1,27 @@
+const siswa = [
+    {
+        "nama":"Achamad Zulfikar",
+        "kelas":"XI-RPL-1"
+    },
+    {
+        "nama":"Wisman Ndaraha",
+        "kelas":"XI-RPL-1"
+    },
+    {
+        "nama":"Farhah Kamilatun",
+        "kelas":"XI-RPL-1"
+    },
+    {
+        "nama":"Vanya",
+        "kelas":"XI-RPL-1"
+    },
+]
+
+let x;
+
+for(x in siswa){
+    let namaSiswa = siswa[x].nama
+    let kelasSiswa = siswa[x].kelas
+    let divider = "<div>\<span class='nama-siswa'>"+namaSiswa+"</span>\<span class='kelas-siswa'>"+kelasSiswa+"</span>\</div>";
+    document.getElementById('siswa-rpl').innerHTML += divider
+}
