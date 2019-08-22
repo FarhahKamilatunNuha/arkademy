@@ -1,0 +1,20 @@
+body{
+    background-color: darkorange;
+}
+table{
+    background-color: chartreuse;
+    width: 500px;
+    height: 400px;
+    padding: 30px;
+    margin: 100px;
+}
+h1{
+    background-color: lightseagreen;
+    color: black;
+    width: 600px;
+    height: 50px;
+    margin: 0px auto;
+    padding: 0px auto;
+    border: 2px solid white;
+    border-radius: 30px;
+}
