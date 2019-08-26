@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Biodata Saya</title>
+    <style>
+        .table,tr,td{
+            border: 4px;
+            padding: 5px;
+            background-color: fuchsia;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border-radius: 5px solid black;
+        }
+        .h1{
+            border: 1px solid green;
+            width: 60px;
+            background: black;
+            border-radius: 30px;
+        }
+        .body{
+            border: 1px solid red;
+            border: 20px;
+            width: 50%;
+            height: 50%;
+            margin:  auto;
+            padding: 5px;
+            background: orangered;
+        }
+        img{
+            width: 140px;
+            height: 140px;
+            top: 2px;
+            margin: 13px;
+            margin-left: 30px;
+            border: 1px solid yellow;
+            margin-top: 0px; 
+        }
+        h3{
+            margin: 5px;
+            margin-left: 60px;
+            padding: 5px;
+            margin-bottom: 0px;
+            font-size: 15px;
+        }    
+        h2{
+            padding: 25px;
+        }
+   </style>
+</head>
+<body>
+    <div class="body">
+        <center><h1>Biodata Saya</h1></center>
+    <div class="biodata">
+         <img src="farhahhh.jpg" width="250px" height="250px" border="5">
+         <div id="nama"></div>
+         <div id="kelas"></div>
+         <div id="sekolah"></div>
+         <h2>Cita-Cita</h2>
+    <div>
+        <div class="hobi"></div>
+        <h3>Hobi</h3>
+        <div id="hobi"></div>
+        <div id="cita-cita"></div>
+    </div>
+    <script>
+        let biodata = {
+            nama : "Farhah Kamilatun Nuha",
+            kelas:"XI RPL-1",
+            sekolah:"SMK Jakarta Pusat 1",          
+        }
+        let nama = document.getElementById('nama');
+        let kelas = document.getElementById('kelas');
+        let sekolah = document.getElementById('sekolah');
+
+        nama.innerHTML = biodata.nama
+        kelas.innerHTML = biodata.kelas
+        sekolah.innerHTML = biodata.sekolah
+    </script>
+</body>
+</html>

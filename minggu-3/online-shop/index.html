@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Online Shop</title>
+    <style>
+    body{
+    background-color: black;
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+  }
+  .item{
+    background: yellow;
+    display: flex;
+    padding:20px;
+    margin-top: 5px;
+  }
+  .item .picture{
+    flex:1;
+    height: auto;
+    width: 100%;
+    display: flex;
+  }
+  .item .picture .thumb{
+    display: block;
+    width:100%;
+  }
+  .item .text{
+    flex:3;
+    background-color: chartreuse;
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .item .text .name{
+    color:black;
+    font-size: 23px;
+    font-weight: bold;
+  }
+  .item .text .price{
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+  }
+  .item .text .rating{
+    font-weight: bold;
+  }
+    </style>
+</head>
+<body>
+    <div id="item-list">
+    </div>
+    <script>
+        let data = [
+            {
+                "name":"Whiteboard",
+                "description":"Whiteboard or usually called the white board made of melamine or formica boards that have various sizes",
+                "price":"250000",
+                "image":[
+                    "assets/board1.jpg",
+                    "assets/board2.jpg",
+                    "assets/board3.jpg"
+                ],
+                "rating":[
+                "0","1","21","6","22"
+                ]
+            },
+            {
+                "name":"Chair",
+                "description":"A chair is a piece of furniture for one person to sit on. Chairs have a back and four legs. The person who is the chair of a committee or meeting is the person in charge of it.",
+                "price":"130000",
+                "image":[
+                    "assets/chair1.jpg",
+                    "assets/chair2.jpg",
+                    "assets/chair3.jpg"
+                ],
+                "rating":[
+                "0","50","1","2","10"
+                ]
+            },
+            {
+                "name":"Totebag",
+                "description":"A tote bag is a large and often unfastened bag with parallel handles that emerge from the sides of its pouch.",
+                "price":"80000",
+                "image":[
+                    "assets/totebag1.jpg",
+                    "assets/totebag2.jpg",
+                    "assets/totebag3.jpg"
+                ],
+                "rating":[
+                "12","0","0","0","5"
+                ]
+            },
+            {
+                "name":"Boardmarker",
+                "description":"Markers are one of the stationery that is widely used to mark objects, write, to paint",
+                "price":"40000",
+                "image":[
+                    "assets/boardmarker1.jpg",
+                    "assets/boardmarker2.jpg",
+                    "assets/boardmarker3.jpg"
+                ],
+                "rating":[
+                "0","0","1","3","8"
+                ]
+            },
+            {
+                "name":"Book",
+                "description":"A book is a collection of paper or other material that is bound together at one end and contains writing, pictures, or stickers",
+                "price":80000,
+                "image":[
+                    "assets/book1.jpg",
+                    "assets/book2.jpg",
+                    "assets/book3.jpg"
+                ],
+                "rating":[
+                "1","2","2","2","31"
+                ]
+            }
+            ];
+
+        function rating(arr){
+            let current = "";
+            let rating = "";
+            let arrRating = ["Buruk","Cukup","Baik","Sangat Baik","Super"];
+            arr.reverse();
+            arr.forEach((v,i)=>{
+
+        if(current !=""){
+        if(current > v){
+        rating = arrRating[i]
+          }
+        }
+        current = v;
+      })
+      return rating;
+    }
+    
+    let element = "";
+    data.forEach((v,i)=>{
+      element+='\
+      <div class="item">\
+        <div class="picture">\
+          <img class="thumb" src="'+data[i].image[0]+'"></img>\
+        </div>\
+        <div class="text">\
+          <div class="name">'+data[i].name+'</div>\
+          <div class="price">Rp.'+data[i].price+',-</div>\
+          <div class="description">'+data[i].description+'</div>\
+          <div class="rating">'+rating(data[i].rating)+'</div>\
+        </div>\
+      </div>\
+      ';
+    });
+    document.getElementById('item-list').innerHTML = element;
+    </script>
+</body>
+</html>
